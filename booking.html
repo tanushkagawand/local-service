@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Book Service - Local Service Finder</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span>LSF</span>
+            Local Service Finder
+        </div>
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="#">
+                About
+            </a>
+
+            <a href="#">
+                Contact
+            </a>
+
+            <a href="login.html"
+               class="login-btn">
+                Login
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Breadcrumb -->
+
+    <div class="breadcrumb">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <span>›</span>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <span>›</span>
+
+        Booking
+
+    </div>
+
+
+
+    <!-- Booking Section -->
+
+    <section class="booking-section">
+
+
+        <div class="booking-container">
+
+
+            <!-- Booking Form -->
+
+            <div class="booking-form-card">
+
+                <div class="booking-heading">
+
+                    <p>
+                        BOOK A SERVICE
+                    </p>
+
+                    <h1>
+                        Schedule Your Service
+                    </h1>
+
+                    <span>
+                        Fill in the details below to send
+                        a service request.
+                    </span>
+
+                </div>
+
+
+
+                <form onsubmit="confirmBooking(event)">
+
+
+                    <!-- Service -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Select Service
+                        </label>
+
+                        <select
+                            id="bookingService"
+                            required>
+
+                            <option value="">
+                                Select a service
+                            </option>
+
+                            <option value="Plumber">
+                                🔧 Plumber
+                            </option>
+
+                            <option value="Electrician">
+                                ⚡ Electrician
+                            </option>
+
+                            <option value="Carpenter">
+                                🪚 Carpenter
+                            </option>
+
+                            <option value="Cleaning">
+                                🧹 Cleaning
+                            </option>
+
+                            <option value="Tutor">
+                                📚 Tutor
+                            </option>
+
+                            <option value="Mechanic">
+                                🚗 Mechanic
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Provider -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Service Provider
+                        </label>
+
+                        <input
+                            type="text"
+                            id="bookingProvider"
+                            value="Raj Plumbing Services"
+                            readonly>
+
+                    </div>
+
+
+
+                    <!-- Name -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label>
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                placeholder="Enter phone number"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Date and Time -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label>
+                                Preferred Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="bookingDate"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Preferred Time
+                            </label>
+
+                            <select
+                                id="bookingTime"
+                                required>
+
+                                <option value="">
+                                    Select time
+                                </option>
+
+                                <option>
+                                    9:00 AM
+                                </option>
+
+                                <option>
+                                    10:00 AM
+                                </option>
+
+                                <option>
+                                    11:00 AM
+                                </option>
+
+                                <option>
+                                    12:00 PM
+                                </option>
+
+                                <option>
+                                    2:00 PM
+                                </option>
+
+                                <option>
+                                    3:00 PM
+                                </option>
+
+                                <option>
+                                    4:00 PM
+                                </option>
+
+                                <option>
+                                    5:00 PM
+                                </option>
+
+                                <option>
+                                    6:00 PM
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Address -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Service Address
+                        </label>
+
+                        <textarea
+                            id="serviceAddress"
+                            rows="3"
+                            placeholder="Enter complete address"
+                            required></textarea>
+
+                    </div>
+
+
+
+                    <!-- Problem -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Describe Your Requirement
+                        </label>
+
+                        <textarea
+                            id="serviceDescription"
+                            rows="4"
+                            placeholder="Explain what service you need..."></textarea>
+
+                    </div>
+
+
+
+                    <!-- Submit -->
+
+                    <button
+                        type="submit"
+                        class="confirm-booking-btn">
+
+                        Confirm Booking
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- Booking Summary -->
+
+            <div class="booking-summary">
+
+
+                <div class="summary-card">
+
+                    <h2>
+                        Booking Summary
+                    </h2>
+
+
+                    <div class="summary-provider">
+
+                        <div class="summary-icon">
+                            👨‍🔧
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Raj Plumbing Services
+                            </h3>
+
+                            <p>
+                                🔧 Professional Plumber
+                            </p>
+
+                            <p>
+                                ⭐ 4.8 / 5
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-line">
+                        <span>Service</span>
+                        <strong id="summaryService">
+                            Not selected
+                        </strong>
+                    </div>
+
+
+                    <div class="summary-line">
+                        <span>Starting Price</span>
+                        <strong>
+                            ₹300
+                        </strong>
+                    </div>
+
+
+                    <div class="summary-line">
+                        <span>Location</span>
+                        <strong>
+                            Kothrud, Pune
+                        </strong>
+                    </div>
+
+
+                    <div class="secure-booking">
+
+                        🔒
+                        Your information is secure
+
+                    </div>
+
+                </div>
+
+
+                <div class="help-card">
+
+                    <h3>
+                        Need Help?
+                    </h3>
+
+                    <p>
+                        Contact our support team if you
+                        have any questions about booking.
+                    </p>
+
+                    <button
+                        onclick="alert('Support: support@localservicefinder.com')">
+
+                        Contact Support
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="copyright">
+
+            © 2026 Local Service Finder.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

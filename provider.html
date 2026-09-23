@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Provider Details - Local Service Finder</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>LSF</span>
+            Local Service Finder
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <a href="services.html">Services</a>
+        <span>›</span>
+        Provider Details
+    </div>
+
+
+    <!-- Provider Profile -->
+    <section class="provider-profile">
+
+        <div class="profile-top">
+
+            <div class="large-provider-image">
+                👨‍🔧
+            </div>
+
+            <div class="profile-info">
+
+                <div class="verified">
+                    ✓ Verified Service Provider
+                </div>
+
+                <h1>Raj Plumbing Services</h1>
+
+                <p class="profile-service">
+                    🔧 Professional Plumber
+                </p>
+
+                <p class="profile-location">
+                    📍 Kothrud, Pune, Maharashtra
+                </p>
+
+                <div class="profile-rating">
+                    ⭐ <strong>4.8</strong>
+                    <span>124 customer reviews</span>
+                </div>
+
+                <p class="experience">
+                    🏆 8+ Years of Experience
+                </p>
+
+            </div>
+
+            <div class="profile-actions">
+
+                <button
+                    class="book-btn"
+                    onclick="bookService()">
+                    Book Service
+                </button>
+
+                <button
+                    class="call-btn"
+                    onclick="contactProvider('Raj Plumbing Services')">
+                    📞 Contact Provider
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Main Details -->
+    <section class="details-container">
+
+        <!-- Left -->
+        <div class="details-main">
+
+            <!-- About -->
+            <div class="details-card">
+
+                <h2>About the Provider</h2>
+
+                <p>
+                    Raj Plumbing Services provides reliable plumbing
+                    solutions for homes, offices and commercial
+                    properties in Pune.
+                </p>
+
+                <p>
+                    Our experienced professionals handle water
+                    leakage, pipe installation, bathroom fittings,
+                    drainage problems and other plumbing requirements.
+                </p>
+
+            </div>
+
+
+            <!-- Services -->
+            <div class="details-card">
+
+                <h2>Services Offered</h2>
+
+                <div class="offered-services">
+
+                    <div>
+                        🔧
+                        <strong>Pipe Repair</strong>
+                        <span>Starting ₹300</span>
+                    </div>
+
+                    <div>
+                        🚿
+                        <strong>Bathroom Fitting</strong>
+                        <span>Starting ₹500</span>
+                    </div>
+
+                    <div>
+                        💧
+                        <strong>Water Leakage Repair</strong>
+                        <span>Starting ₹350</span>
+                    </div>
+
+                    <div>
+                        🛠️
+                        <strong>Pipe Installation</strong>
+                        <span>Starting ₹600</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Reviews -->
+            <div class="details-card">
+
+                <div class="review-heading">
+
+                    <h2>Customer Reviews</h2>
+
+                    <div class="overall-rating">
+                        ⭐ 4.8 / 5
+                    </div>
+
+                </div>
+
+
+                <div class="review">
+
+                    <div class="review-user">
+                        <div class="user-circle">A</div>
+
+                        <div>
+                            <strong>Akash Patil</strong>
+                            <p>⭐⭐⭐⭐⭐</p>
+                        </div>
+                    </div>
+
+                    <p>
+                        Very professional service. The plumber arrived
+                        on time and fixed the leakage quickly.
+                    </p>
+
+                </div>
+
+
+                <div class="review">
+
+                    <div class="review-user">
+                        <div class="user-circle">S</div>
+
+                        <div>
+                            <strong>Shweta Joshi</strong>
+                            <p>⭐⭐⭐⭐⭐</p>
+                        </div>
+                    </div>
+
+                    <p>
+                        Good service and reasonable pricing.
+                        Highly recommended.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Right -->
+        <aside class="details-sidebar">
+
+            <div class="details-card">
+
+                <h2>Contact Information</h2>
+
+                <div class="contact-item">
+                    📞
+                    <div>
+                        <small>Phone</small>
+                        <strong>+91 98765 43210</strong>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    ✉️
+                    <div>
+                        <small>Email</small>
+                        <strong>rajplumbing@example.com</strong>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    📍
+                    <div>
+                        <small>Address</small>
+                        <strong>
+                            Kothrud, Pune, Maharashtra
+                        </strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="details-card">
+
+                <h2>Availability</h2>
+
+                <p class="available">
+                    ● Available Today
+                </p>
+
+                <p>
+                    Monday - Saturday
+                </p>
+
+                <p>
+                    9:00 AM - 7:00 PM
+                </p>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2>Local Service Finder</h2>
+
+                <p>
+                    Connecting customers with trusted local
+                    service providers.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Local Service Finder. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

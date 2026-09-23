@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Provider Dashboard - Local Service Finder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span>LSF</span>
+            Local Service Finder
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#" onclick="logoutUser()">Logut</a>
+        </nav>
+    </header>
+    <!-- Dashboard -->
+    <section class="dashboard-section">
+        <div class="dashboard-container">
+            <!-- Welcome -->
+            <div class="dashboard-welcome">
+                <div>
+                    <p>PROVIDER DASHBOARD</p>
+                    <h1>
+                        Welcome back, Raj! 👋
+                    </h1>
+                    <span>
+                        Manage your services and customer requests.
+                    </span>
+                </div>
+                <button
+                    class="find-service-btn"
+                    onclick="addService()">
+                    + Add Service
+                </button>
+            </div>
+            <!-- Statistics -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        📋
+                    </div>
+                    <div>
+                        <span>Total Requests</span>
+                        <h2>24</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon pending">
+                        ⏳
+                    </div>
+                    <div>
+                        <span>Pending</span>
+                        <h2>5</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon completed">
+                        ✓
+                    </div>
+                    <div>
+                        <span>Completed</span>
+                        <h2>19</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        ⭐
+                    </div>
+                    <div>
+                        <span>Rating</span>
+                        <h2>4.8</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Grid -->
+            <div class="dashboard-grid">
+                <!-- Booking Requests -->
+                <div class="dashboard-card bookings-card">
+                    <div class="card-heading">
+                        <div>
+                            <h2>
+                                Booking Requests
+                            </h2>
+                            <p>
+                                Recent requests from customers
+                            </p>
+                        </div>
+                        <a href="#">
+                            View All
+                        </a>
+                    </div>
+                    <!-- Request 1 -->
+                    <div class="booking-item">
+                        <div class="booking-service-icon">
+                            🔧
+                        </div>
+                        <div class="booking-details">
+                            <h3>
+                                Plumbing Service
+                            </h3>
+                            <p>
+                                Customer: Amit Sharma
+                            </p>
+                            <span>
+                                📅 30 August 2026
+                                &nbsp; • &nbsp;
+                                10:00 AM
+                            </span>
+                        </div>
+                        <div class="provider-actions">
+                            <button
+                                class="accept-btn"
+                                onclick="acceptRequest('Amit Sharma')">
+                                Accept
+                            </button>
+                            <button
+                                class="reject-btn"
+                                onclick="rejectRequest('Amit Sharma')">
+                                Reject
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Request 2 -->
+                    <div class="booking-item">
+                        <div class="booking-service-icon">
+                            🚿
+                        </div>
+                        <div class="booking-details">
+                            <h3>
+                                Bathroom Fitting
+                            </h3>
+                            <p>
+                                Customer: Priya Patil
+                            </p>
+                            <span>
+                                📅 1 September 2026
+                                &nbsp; • &nbsp;
+                                2:00 PM
+                            </span>
+                        </div>
+                        <div class="provider-actions">
+                            <button
+                                class="accept-btn"
+                                onclick="acceptRequest('Priya Patil')">
+                                Accept
+                            </button>
+                            <button
+                                class="reject-btn"
+                                onclick="rejectRequest('Priya Patil')">
+
+                                Reject
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Request 3 -->
+                    <div class="booking-item">
+                        <div class="booking-service-icon">
+                            💧
+                        </div>
+                        <div class="booking-details">
+                            <h3>
+                                Water Leakage Repair
+                            </h3>
+                            <p>
+                                Customer: Neha Joshi
+                            </p>
+                            <span>
+                                📅 3 September 2026
+                                &nbsp; • &nbsp;
+                                11:00 AM
+                            </span>
+                        </div>
+                        <div class="provider-actions">
+                            <button
+                                class="accept-btn"
+                                onclick="acceptRequest('Neha Joshi')">
+                                Accept
+                            </button>
+                            <button
+                                class="reject-btn"
+                                onclick="rejectRequest('Neha Joshi')">
+                                Reject
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Provider Profile -->
+                <div class="dashboard-card profile-card">
+                    <div class="profile-card-header">
+                        <div class="dashboard-avatar">
+                            R
+                        </div>
+                        <div>
+                            <h2>
+                                Raj Plumbing Services
+                            </h2>
+                            <p>
+                                Verified Provider ✓
+                            </p>
+                        </div>
+                    </div>
+                    <div class="profile-info-item">
+                        <span>📧 Email</span>
+                        <strong>
+                            rajplumbing@example.com
+                        </strong>
+                    </div>
+                    <div class="profile-info-item">
+                        <span>📞 Phone</span>
+                        <strong>
+                            +91 98765 43210
+                        </strong>
+                    </div>
+                    <div class="profile-info-item">
+                        <span>📍 Location</span>
+                        <strong>
+                            Kothrud, Pune
+                        </strong>
+                    </div>
+                    <div class="profile-info-item">
+                        <span>🏆 Experience</span>
+                        <strong>
+                            8+ Years
+                        </strong>
+                    </div>
+                    <button
+                        class="edit-profile-btn"
+                        onclick="editProviderProfile()">
+                        Edit Profile
+                    </button>
+                </div>
+            </div>
+            <!-- Services -->
+            <div class="dashboard-card recommended-card">
+                <div class="card-heading">
+                    <div>
+                        <h2>
+                            My Services
+                        </h2>
+                        <p>
+                            Services currently offered
+                        </p>
+                    </div>
+                    <button
+                        class="small-add-btn"
+                        onclick="addService()">
+                        + Add Service
+                    </button>
+                </div>
+                <div class="provider-services">
+                    <div class="provider-service-card">
+                        <div class="provider-service-icon">
+                            🔧
+                        </div>
+                        <h3>
+                            Pipe Repair
+                        </h3>
+                        <p>
+                            Starting from ₹300
+                        </p>
+                        <div class="service-actions">
+                            <button
+                                onclick="editService('Pipe Repair')">
+                                Edit
+                            </button>
+                            <button
+                                onclick="deleteService('Pipe Repair')">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                    <div class="provider-service-card">
+                        <div class="provider-service-icon">
+                            🚿
+                        </div>
+                        <h3>
+                            Bathroom Fitting
+                        </h3>
+                        <p>
+                            Starting from ₹500
+                        </p>
+                        <div class="service-actions">
+                            <button
+                                onclick="editService('Bathroom Fitting')">
+                                Edit
+                            </button>
+                            <button
+                                onclick="deleteService('Bathroom Fitting')">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                    <div class="provider-service-card">
+                        <div class="provider-service-icon">
+                            💧
+                        </div>
+                        <h3>
+                            Water Leakage Repair
+                        </h3>
+                        <p>
+                            Starting from ₹350
+                        </p>
+                        <div class="service-actions">
+                            <button
+                                onclick="editService('Water Leakage Repair')">
+                                Edit
+                            </button>
+                            <button
+                                onclick="deleteService('Water Leakage Repair')">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Availability -->
+            <div class="dashboard-card availability-card">
+                <div>
+                    <h2>
+                        Service Availability
+                    </h2>
+                    <p>
+                        Let customers know when you're available.
+                    </p>
+                </div>
+                <div class="availability-control">
+                    <span class="available-dot">
+                        ●
+                    </span>
+                    <strong>
+                        Available
+                    </strong>
+                    <button
+                        onclick="toggleAvailability()">
+                        Change
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="copyright">
+            © 2026 Local Service Finder.
+            All Rights Reserved.
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

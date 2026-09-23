@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Services - Local Service Finder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span>LSF</span>
+            Local Service Finder
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </nav>
+    </header>
+    <!-- Search Header -->
+    <section class="results-header">
+        <p>LOCAL SERVICE FINDER</p>
+        <h1>Find Local Service Providers</h1>
+        <div class="result-search">
+            <input
+                type="text"
+                id="searchService"
+                placeholder="Search service...">
+            <input
+                type="text"
+                id="searchLocation"
+                placeholder="Location...">
+            <button onclick="filterServices()">
+                Search
+            </button>
+        </div>
+    </section>
+    <!-- Results -->
+    <section class="results-section">
+        <div class="results-top">
+            <h2>Available Service Providers</h2>
+            <select id="sortOption">
+                <option>Sort: Recommended</option>
+                <option>Highest Rated</option>
+                <option>Lowest Price</option>
+            </select>
+        </div>
+        <div class="provider-container" id="providerContainer">
+            <div id="noResults" class="no-results">
+    <div>🔍</div>
+    <h2>No Service Providers Found</h2>
+    <p>
+        We couldn't find any providers matching your search.
+        Try another service or location.
+    </p>
+</div>
+            <!-- Provider 1 -->
+            <div class="provider-card">
+                <div class="provider-image">
+                    👨‍🔧
+                </div>
+                <div class="provider-info">
+                    <div class="verified">
+                        ✓ Verified Provider
+                    </div>
+                    <h3>Raj Plumbing Services</h3>
+                    <p class="service-name">
+                        🔧 Plumber
+                    </p>
+                    <p class="location">
+                        📍 Kothrud, Pune
+                    </p>
+                    <div class="rating">
+                        ⭐ 4.8
+                        <span>(124 reviews)</span>
+                    </div>
+                    <p class="price">
+                        Starting from ₹300
+                    </p>
+                    <div class="provider-buttons">
+                        <button class="details-btn"
+                            onclick="viewProvider('Raj Plumbing Services')">
+                            View Details
+                        </button>
+                        <button class="contact-btn"
+                            onclick="contactProvider('Raj Plumbing Services')">
+                            Contact
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Provider 2 -->
+            <div class="provider-card">
+                <div class="provider-image">
+                    ⚡
+                </div>
+                <div class="provider-info">
+                    <div class="verified">
+                        ✓ Verified Provider
+                    </div>
+                    <h3>Patil Electrical Works</h3>
+                    <p class="service-name">
+                        ⚡ Electrician
+                    </p>
+                    <p class="location">
+                        📍 Baner, Pune
+                    </p>
+                    <div class="rating">
+                        ⭐ 4.7
+                        <span>(98 reviews)</span>
+                    </div>
+                    <p class="price">
+                        Starting from ₹250
+                    </p>
+                    <div class="provider-buttons">
+                        <button class="details-btn"
+                            onclick="viewProvider('Patil Electrical Works')">
+                            View Details
+                        </button>
+                        <button class="contact-btn"
+                            onclick="contactProvider('Patil Electrical Works')">
+                            Contact
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Provider 3 -->
+            <div class="provider-card">
+                <div class="provider-image">
+                    🪚
+                </div>
+                <div class="provider-info">
+                    <div class="verified">
+                        ✓ Verified Provider
+                    </div>
+                    <h3>Shree Carpenter Services</h3>
+                    <p class="service-name">
+                        🪚 Carpenter
+                    </p>
+                    <p class="location">
+                        📍 Wakad, Pune
+                    </p>
+                    <div class="rating">
+                        ⭐ 4.6
+                        <span>(76 reviews)</span>
+                    </div>
+                    <p class="price">
+                        Starting from ₹400
+                    </p>
+                    <div class="provider-buttons">
+                        <button class="details-btn"
+                            onclick="viewProvider('Shree Carpenter Services')">
+                            View Details
+                        </button>
+                        <button class="contact-btn"
+                            onclick="contactProvider('Shree Carpenter Services')">
+                            Contact
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Provider 4 -->
+            <div class="provider-card">
+                <div class="provider-image">
+                    🧹
+                </div>
+                <div class="provider-info">
+                    <div class="verified">
+                        ✓ Verified Provider
+                    </div>
+                    <h3>CleanHome Services</h3>
+                    <p class="service-name">
+                        🧹 Cleaning
+                    </p>
+                    <p class="location">
+                        📍 Aundh, Pune
+                    </p>
+                    <div class="rating">
+                        ⭐ 4.9
+                        <span>(156 reviews)</span>
+                    </div>
+                    <p class="price">
+                        Starting from ₹500
+                    </p>
+                    <div class="provider-buttons">
+                        <button class="details-btn"
+                            onclick="viewProvider('CleanHome Services')">
+                            View Details
+                        </button>
+                        <button class="contact-btn"
+                            onclick="contactProvider('CleanHome Services')">
+                            Contact
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h2>Local Service Finder</h2>
+                <p>
+                    Connecting customers with trusted local
+                    service providers.
+                </p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Local Service Finder. All Rights Reserved.
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

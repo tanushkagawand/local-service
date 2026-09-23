@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard - Local Service Finder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span>LSF</span>
+            Local Service Finder
+        </div>
+        <nav>
+            <a href="index.html">
+                Home
+            </a>
+            <a href="services.html">
+                Services
+            </a>
+            <a href="#">
+                About
+            </a>
+            <a href="#">
+                Contact
+            </a>
+            <a href="#" onclick="logoutUser()">
+                Logout
+            </a>
+        </nav>
+    </header>
+    <!-- Dashboard -->
+    <section class="dashboard-section">
+        <div class="dashboard-container">
+            <!-- Welcome -->
+            <div class="dashboard-welcome">
+                <div>
+                    <p>
+                        CUSTOMER DASHBOARD
+                    </p>
+                    <h1>
+                        Welcome back, Tanushka! 👋
+                    </h1>
+                    <span>
+                        Manage your services and bookings
+                        from one place.
+                    </span>
+                </div>
+                <a
+                    href="services.html"
+                    class="find-service-btn">
+                    + Find a Service
+                </a>
+            </div>
+            <!-- Statistics -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        📅
+                    </div>
+                    <div>
+                        <span>
+                            Total Bookings
+                        </span>
+                        <h2>
+                            8
+                        </h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon pending">
+                        ⏳
+                    </div>
+                    <div>
+                        <span>
+                            Pending
+                        </span>
+                        <h2>
+                            2
+                        </h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon completed">
+                        ✓
+                    </div>
+                    <div>
+                        <span>
+                            Completed
+                        </span>
+                        <h2>
+                            6
+                        </h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon cancelled">
+                        ✕
+                    </div>
+                    <div>
+                        <span>
+                            Cancelled
+                        </span>
+                        <h2>
+                            0
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Dashboard Content -->
+            <div class="dashboard-grid">
+                <!-- Bookings -->
+                <div class="dashboard-card bookings-card">
+                    <div class="card-heading">
+                        <div>
+                            <h2>
+                                Recent Bookings
+                            </h2>
+                            <p>
+                                Your latest service requests
+                            </p>
+                        </div>
+                        <a href="#">
+                            View All
+                        </a>
+                    </div>
+                    <!-- Booking 1 -->
+                    <div class="booking-item">
+                        <div class="booking-service-icon">
+                            🔧
+                        </div>
+                        <div class="booking-details">
+                            <h3>
+                                Raj Plumbing Services
+                            </h3>
+                            <p>
+                                Plumbing Service
+                            </p>
+                            <span>
+                                📅 30 August 2026
+                                &nbsp; • &nbsp;
+                                10:00 AM
+                            </span>
+                        </div>
+                        <div class="booking-status pending-status">
+                            Pending
+                        </div>
+                    </div>
+                    <!-- Booking 2 -->
+                    <div class="booking-item">
+                        <div class="booking-service-icon">
+                            ⚡
+                        </div>
+                        <div class="booking-details">
+                            <h3>
+                                Patil Electrical Works
+                            </h3>
+                            <p>
+                                Electrical Repair
+                            </p>
+                            <span>
+                                📅 2 September 2026
+                                &nbsp; • &nbsp;
+                                3:00 PM
+                            </span>
+                        </div>
+                        <div class="booking-status confirmed-status">
+                            Confirmed
+                        </div>
+                    </div>
+                    <!-- Booking 3 -->
+                    <div class="booking-item">
+                        <div class="booking-service-icon">
+                            🧹
+                        </div>
+                        <div class="booking-details">
+                            <h3>
+                                CleanHome Services
+                            </h3>
+                            <p>
+                                Home Cleaning
+                            </p>
+                            <span>
+                                📅 25 August 2026
+                                &nbsp; • &nbsp;
+                                11:00 AM
+                            </span>
+                        </div>
+                        <div class="booking-status completed-status">
+                            Completed
+                        </div>
+                    </div>
+                </div>
+                <!-- Profile -->
+                <div class="dashboard-card profile-card">
+                    <div class="profile-card-header">
+                        <div class="dashboard-avatar">
+                            T
+                        </div>
+                        <div>
+                            <h2>
+                                Tanushka Gawand
+                            </h2>
+                            <p>
+                                Customer
+                            </p>
+                        </div>
+                    </div>
+                    <div class="profile-info-item">
+                        <span>
+                            📧 Email
+                        </span>
+                        <strong>
+                            tanushka@example.com
+                        </strong>
+                    </div>
+                    <div class="profile-info-item">
+                        <span>
+                            📞 Phone
+                        </span>
+                        <strong>
+                            +91 98765 43210
+                        </strong>
+                    </div>
+                    <div class="profile-info-item">
+                        <span>
+                            📍 Location
+                        </span>
+                        <strong>
+                            Pune, Maharashtra
+                        </strong>
+                    </div>
+                    <button
+                        class="edit-profile-btn"
+                        onclick="editProfile()">
+                        Edit Profile
+                    </button>
+                </div>
+            </div>
+            <!-- Recommended Services -->
+            <div class="dashboard-card recommended-card">
+                <div class="card-heading">
+                    <div>
+                        <h2>
+                            Recommended Services
+                        </h2>
+                        <p>
+                            Services you may need
+                        </p>
+                    </div>
+                </div>
+                <div class="recommended-services">
+                    <div
+                        class="recommended-service"
+                        onclick="goToService('Plumber')">
+                        <div>
+                            🔧
+                        </div>
+                        <h3>
+                            Plumbing
+                        </h3>
+                        <p>
+                            12 Providers
+                        </p>
+                    </div>
+                    <div
+                        class="recommended-service"
+                        onclick="goToService('Electrician')">
+                        <div>
+                            ⚡
+                        </div>
+                        <h3>
+                            Electrician
+                        </h3>
+                        <p>
+                            18 Providers
+                        </p>
+                    </div>
+                    <div
+                        class="recommended-service"
+                        onclick="goToService('Cleaning')">
+                        <div>
+                            🧹
+                        </div>
+                        <h3>
+                            Cleaning
+                        </h3>
+                        <p>
+                            15 Providers
+                        </p>
+                    </div>
+                    <div
+                        class="recommended-service"
+                        onclick="goToService('Carpenter')">
+                        <div>
+                            🪚
+                        </div>
+                        <h3>
+                            Carpenter
+                        </h3>
+                        <p>
+                            9 Providers
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="copyright">
+            © 2026 Local Service Finder.
+            All Rights Reserved.
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
